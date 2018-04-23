@@ -24,7 +24,7 @@ setup(
     version=__version__,
     description='Twilio Studio provider for SMSFramework',
     long_description=long_description,
-    url='https://github.com/daghoidahl/py-smsframework-twiliostudio',
+    url='https://github.com/dignio/py-smsframework-twiliostudio',
     download_url='https://github.com/daghoidahl/py-smsframework-twiliostudio/tarball/' + __version__,
     license='BSD',
     classifiers=[
@@ -35,7 +35,7 @@ setup(
     keywords='',
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
-    author='Dag Høidahl',
+    author=u'Dag Høidahl',
     install_requires=install_requires,
     dependency_links=dependency_links,
     author_email='dag@dignio.com'

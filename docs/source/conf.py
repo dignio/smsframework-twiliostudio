@@ -49,8 +49,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'SMSFramework Twilio Studio provider'
-copyright = '2016, Dag Høidahl'
-author = 'Dag Høidahl'
+copyright = u'2018, Dignio as'
+author = u'Dag Høidahl'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -228,7 +228,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'SMSFramework Twilio Studio provider.tex', 'SMSFramework Twilio Studio provider Documentation',
-     'Dag Høidahl', 'manual'),
+     u'Dag Høidahl', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
