@@ -26,7 +26,7 @@ setup(
     long_description=long_description,
     url='https://github.com/dignio/py-smsframework-twiliostudio',
     download_url='https://github.com/daghoidahl/py-smsframework-twiliostudio/tarball/' + __version__,
-    license='BSD',
+    license='MIT',
     classifiers=[
       'Development Status :: 3 - Alpha',
       'Intended Audience :: Developers',
