@@ -46,16 +46,11 @@ class TwilioStudioProvider(IProvider):
                 auth=(self.username, self.secret),
                 data=params,
             )
-            print(
-                "Response HTTP Status Code: {status_code}".format(
-                    status_code=response.status_code
-                )
-            )
-            print(
-                "Response HTTP Response Body: {content}".format(
-                    content=response.content
-                )
-            )
+            response.raise_for_status()
+
+            body = response.json()
+            message.msgid = body['url']
+            return message
         except requests.exceptions.RequestException as e:
             raise error.TwilioStudioProviderError(e.code, e.message)
 
