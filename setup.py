@@ -24,6 +24,8 @@ setup(
     version=__version__,
     description='Twilio Studio provider for SMSFramework',
     long_description=long_description,
+    long_description_content_type='text/markdown',
+
     url='https://github.com/dignio/py-smsframework-twiliostudio',
     download_url='https://github.com/daghoidahl/py-smsframework-twiliostudio/tarball/' + __version__,
     license='MIT',
@@ -31,6 +33,7 @@ setup(
       'Development Status :: 3 - Alpha',
       'Intended Audience :: Developers',
       'Programming Language :: Python :: 2.7',
+      'Programming Language :: Python :: 3',
     ],
     keywords='',
     packages=find_packages(exclude=['docs', 'tests*']),
