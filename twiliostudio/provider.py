@@ -5,7 +5,7 @@ from smsframework import IProvider, exc
 
 from . import error
 
-ENGAGEMENTS_URL = "https://studio.twilio.com/v1/Flows/{}/Engagements"
+ENGAGEMENTS_URL = "https://studio.twilio.com/v1/Flows/{}/Executions"
 
 
 class TwilioStudioProvider(IProvider):
