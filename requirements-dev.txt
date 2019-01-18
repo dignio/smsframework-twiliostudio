@@ -5,3 +5,5 @@ nose
 coverage
 pypi-publisher
 -e git+git@github.com:kolypto/py-smsframework.git#egg=smsframework
+requests-mock
+flask

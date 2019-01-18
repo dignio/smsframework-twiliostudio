@@ -5,7 +5,7 @@ from smsframework import IProvider, exc
 
 from . import error
 
-ENGAGEMENTS_URL = "https://studio.twilio.com/v1/Flows/{}/Executions"
+EXECUTIONS_URL = "https://studio.twilio.com/v1/Flows/{}/Executions"
 
 
 class TwilioStudioProvider(IProvider):
@@ -39,7 +39,7 @@ class TwilioStudioProvider(IProvider):
         # Send
         try:
             response = requests.post(
-                url=ENGAGEMENTS_URL.format(self.account_sid),
+                url=EXECUTIONS_URL.format(self.account_sid),
                 headers={
                     "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
                 },
@@ -49,10 +49,11 @@ class TwilioStudioProvider(IProvider):
             response.raise_for_status()
 
             body = response.json()
-            message.msgid = body['url']
+            # body['url'] ~= 'https://studio.twilio.com/v1/Flows/sid/Executions/FN0000'
+            message.msgid = '/'.join(body['url'].rsplit('/', 4)[1:])
             return message
         except requests.exceptions.RequestException as e:
-            raise error.TwilioStudioProviderError(e.code, e.message)
+            raise error.TwilioStudioProviderError(e.code, str(e))
 
     # region Public
 
